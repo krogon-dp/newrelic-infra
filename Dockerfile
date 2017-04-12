@@ -2,7 +2,7 @@ FROM centos:7
 
 MAINTAINER Robin Kearney <robin@kearney.co.uk>
 
-ADD newrelic-infra.repo /etc/yum.repos.d/
+#ADD newrelic-infra.repo /etc/yum.repos.d/
 
 RUN curl -o /etc/yum.repos.d/newrelic-infra.repo https://download.newrelic.com/infrastructure_agent/linux/yum/el/7/x86_64/newrelic-infra.repo
 
