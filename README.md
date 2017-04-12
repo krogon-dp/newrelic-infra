@@ -1,7 +1,8 @@
 # newrelic-infra-docker
 
-WIP `Dockerfile` for hosting the newrelic-infra agent in a docker container.
+**WIP!**
 
+This is my attempt at hosting the `newrelic-infra` agent inside a Docker container. Mostly inspired from [this](https://discuss.newrelic.com/t/relic-solution-running-the-agent-inside-of-a-docker-container/45676) post, and [this](https://github.com/kubernetes/kubernetes/tree/master/examples/newrelic) example in the [Kubernetes](https://kubernetes.io/) source. The example in the K8s source doesn't work for newer NewRelic accounts, where servers have been removed in favour of the new infrastructure pages.
 
 ## Building
 
