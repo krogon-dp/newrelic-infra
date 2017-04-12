@@ -3,7 +3,6 @@ newrelic-infra
 
 [![docker version][version-badge]][microbadger-link]
 [![Layers][layer-badge]][microbadger-link]
-[![License][license-badge]][microbadger-link]
 
 
 **WIP!**
@@ -77,7 +76,6 @@ TODO
 
 [version-badge]: https://images.microbadger.com/badges/version/rk295/newrelic-infra.svg
 [layer-badge]: https://images.microbadger.com/badges/image/rk295/newrelic-infra.svg
-[license-badge]: https://images.microbadger.com/badges/license/rk295/newrelic-infra.svg
 [microbadger-link]: https://microbadger.com/images/rk295/newrelic-infra
 [newrelic-post]: https://discuss.newrelic.com/t/relic-solution-running-the-agent-inside-of-a-docker-container/45676
 [k8s-example]: https://github.com/kubernetes/kubernetes/tree/master/examples/newrelic
