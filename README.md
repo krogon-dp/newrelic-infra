@@ -1,10 +1,17 @@
-# newrelic-infra-docker
+newrelic-infra
+==============
+
+[![docker version][version-badge]][microbadger-link]
+[![Layers][layer-badge]][microbadger-link]
+[![License][license-badge]][microbadger-link]
+
 
 **WIP!**
 
-This is my attempt at hosting the `newrelic-infra` agent inside a Docker container. Mostly inspired from [this](https://discuss.newrelic.com/t/relic-solution-running-the-agent-inside-of-a-docker-container/45676) post, and [this](https://github.com/kubernetes/kubernetes/tree/master/examples/newrelic) example in the [Kubernetes](https://kubernetes.io/) source. The example in the K8s source doesn't work for newer NewRelic accounts, where servers have been removed in favour of the new infrastructure pages.
+This is my attempt at hosting the `newrelic-infra` agent inside a Docker container. Mostly inspired from [this][newrelic-post] post, and [this][k8s-example] example in the [Kubernetes] source. The example in the K8s source doesn't work for newer NewRelic accounts, where servers have been removed in favour of the new infrastructure pages.
 
-## Building
+Building
+--------
 
 A simple `docker build` should be sufficient from within the root of the repo.
 
@@ -44,9 +51,11 @@ A simple `docker build` should be sufficient from within the root of the repo.
      ---> 59b7a117a15e
     Successfully built 59b7a117a15e
 
-## Running
+Running
+-------
 
 ### Manually using Docker
+
 
 The below example assumes you've set the `NRIA_LICENSE_KEY` environment variable to your license key before you run `docker run`.
 
@@ -64,3 +73,12 @@ The below example assumes you've set the `NRIA_LICENSE_KEY` environment variable
 ### Running from inside Kubernetes
 
 TODO
+
+
+[version-badge]: https://images.microbadger.com/badges/version/rk295/newrelic-infra.svg
+[layer-badge]: https://images.microbadger.com/badges/image/rk295/newrelic-infra.svg
+[license-badge]: https://images.microbadger.com/badges/license/rk295/newrelic-infra.svg
+[microbadger-link]: https://microbadger.com/images/rk295/newrelic-infra
+[newrelic-post]: https://discuss.newrelic.com/t/relic-solution-running-the-agent-inside-of-a-docker-container/45676
+[k8s-example]: https://github.com/kubernetes/kubernetes/tree/master/examples/newrelic
+[Kubernetes]: https://kubernetes.io/
