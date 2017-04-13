@@ -4,8 +4,11 @@ MAINTAINER Robin Kearney <robin@kearney.co.uk>
 
 RUN curl -o /etc/yum.repos.d/newrelic-infra.repo https://download.newrelic.com/infrastructure_agent/linux/yum/el/7/x86_64/newrelic-infra.repo
 
-RUN yum --nogpgcheck makecache fast && \
-    yum -y --nogpgcheck install newrelic-infra dmidecode policycoreutils && \
+# This because (I believe temporary) issue with the NR GPG Key
+RUN sed -i -e 's/gpgcheck=1/gpgcheck=0/g' /etc/yum.repos.d/newrelic-infra.repo
+
+RUN yum makecache fast && \
+    yum -y install newrelic-infra dmidecode policycoreutils && \
     yum clean all
 
 ADD newrelic-infra.yml /etc/
