@@ -66,7 +66,7 @@ The below example assumes you've set the `NRIA_LICENSE_KEY` environment variable
            --privileged=true \
            -e NRIA_LICENSE_KEY="$NRIA_LICENSE_KEY" \
            -v /:/mnt/ROOT:ro \
-           rk295-newrelic-infra
+           rk295/newrelic-infra
 
 
 ### Running from inside Kubernetes
