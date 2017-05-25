@@ -2,10 +2,10 @@ FROM centos:7
 
 MAINTAINER Robin Kearney <robin@kearney.co.uk>
 
-RUN curl -o /etc/yum.repos.d/newrelic-infra.repo https://download.newrelic.com/infrastructure_agent/linux/yum/el/7/x86_64/newrelic-infra.repo
-
-RUN yum --nogpgcheck makecache fast && \
-    yum -y --nogpgcheck install newrelic-infra dmidecode policycoreutils && \
+RUN curl -o /etc/yum.repos.d/newrelic-infra.repo https://download.newrelic.com/infrastructure_agent/linux/yum/el/7/x86_64/newrelic-infra.repo && \
+    curl -o /etc/yum.repos.d/docker-ce.repo      https://download.docker.com/linux/centos/docker-ce.repo && \
+    yum --nogpgcheck makecache fast && \
+    yum -y --nogpgcheck install newrelic-infra dmidecode policycoreutils docker-ce && \
     yum clean all
 
 ADD newrelic-infra.yml /etc/
